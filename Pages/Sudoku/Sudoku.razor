@@ -1,0 +1,56 @@
+﻿@page "/sudoku"
+@using Khoassant.Objects.Sudoku
+
+<PageTitle>Sudoku Solver</PageTitle>
+
+
+<table>
+    <colgroup><col><col><col></colgroup>
+    <colgroup><col><col><col></colgroup>
+    <colgroup><col><col><col></colgroup>
+
+    @for (int i = 0; i < 9; i += 3)
+    {
+        <tbody>
+        <tr>
+            @for (int j = 1; j <= 9; j++)
+            {
+                var tile = new SudokuTile
+                    {
+                        Row = i + 1,
+                        Col = j
+                    };
+                <SudokuTileComponent Tile="@tile"></SudokuTileComponent>
+            }
+        </tr>
+        <tr>
+            @for (int j = 1; j <= 9; j++)
+            {
+                var tile = new SudokuTile
+                    {
+                        Row = i + 2,
+                        Col = j
+                    };
+                <SudokuTileComponent Tile="@tile"></SudokuTileComponent>
+            }
+        </tr>
+        <tr>
+            @for (int j = 1; j <= 9; j++)
+            {
+                var tile = new SudokuTile
+                    {
+                        Row = i + 3,
+                        Col = j
+                    };
+                <SudokuTileComponent Tile="@tile"></SudokuTileComponent>
+            }
+        </tr>
+        </tbody>
+    }
+
+</table>
+
+
+@code {
+
+}

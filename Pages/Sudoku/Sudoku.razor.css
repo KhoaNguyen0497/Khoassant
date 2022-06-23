@@ -1,0 +1,8 @@
+﻿table {
+    border-collapse: collapse;
+    font-family: Calibri, sans-serif;
+}
+
+colgroup, tbody {
+    border: solid medium;
+}
